@@ -1,6 +1,6 @@
 # Algo Library
 
-This the module provided by the Algo Team
+This is the module provided by the Algo Team
 
   
 
