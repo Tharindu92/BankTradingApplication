@@ -1,7 +1,9 @@
 package com.bank.trade.application.signal;
 
 import com.bank.trade.algo.Algo;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class SignalTwo extends Signal{
     private Algo algo;
     public SignalTwo(Algo algo){
@@ -9,6 +11,7 @@ public class SignalTwo extends Signal{
     }
 
     public void executeAlgorithm(){
+        log.info("Executing Signal 1 trading algorithm");
         algo.reverse();
         algo.setAlgoParam(1,80);
         algo.submitToMarket();
