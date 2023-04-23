@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class SignalHandleServiceTest {
+class SignalHandleServiceTest {
 
     @Autowired
     SignalHandlerService signalHandlerService;
@@ -15,12 +15,12 @@ public class SignalHandleServiceTest {
     @Test
     void testSignalHandlerServiceWithCorrectSignalClass() {
         String actualResponse = signalHandlerService.invokeTradeAlgorithm("Invalid");
-        Assertions.assertEquals(actualResponse, AppConstants.ALGO_INVOCATION_MESSAGE);
+        Assertions.assertEquals(AppConstants.ALGO_INVOCATION_MESSAGE, actualResponse);
     }
 
     @Test
     void testSignalHandlerServiceWithInCorrectSignalClass() {
         String actualResponse = signalHandlerService.invokeTradeAlgorithm("Two");
-        Assertions.assertEquals(actualResponse, AppConstants.SIGNAL_MISMATCH_ERROR_MSG);
+        Assertions.assertEquals(AppConstants.SIGNAL_MISMATCH_ERROR_MSG, actualResponse);
     }
 }

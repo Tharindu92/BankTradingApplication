@@ -4,7 +4,7 @@ import com.bank.trade.algo.Algo;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class SignalThree extends Signal {
+public class SignalThree implements Signal {
     private Algo algo;
     public SignalThree(Algo algo){
         this.algo = algo;

@@ -15,6 +15,6 @@ class SignalHandleControllerTest {
     @Test
     void testSignalOneController() {
         ResponseEntity<String> actualResponse = controller.executeTradeAlgorithm();
-        Assertions.assertEquals(actualResponse.getStatusCode().value(),200);
+        Assertions.assertEquals(200, actualResponse.getStatusCode().value());
     }
 }

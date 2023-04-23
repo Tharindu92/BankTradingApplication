@@ -3,6 +3,7 @@ package com.bank.trade.application;
 import com.ban.trade.handle.SignalHandler;
 import com.bank.trade.application.cache.SignalEndpoints;
 import com.bank.trade.application.util.CacheConstants;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.net.http.HttpClient;
@@ -12,6 +13,7 @@ import java.util.Locale;
 
 import static java.net.URI.create;
 
+@Slf4j
 public class Application implements SignalHandler {
     public void handleSignal(int signal) {
         String url = getEndPointUrl(signal);
@@ -33,9 +35,9 @@ public class Application implements SignalHandler {
             httpResponse = client.send(request, HttpResponse.BodyHandlers.ofString());
 
         } catch (IOException  e) {
-            System.err.println("Error calling the micro service: " + e.getMessage());
+            log.error("Error calling the micro service: " + e.getMessage());
         } catch (InterruptedException e) {
-            System.err.println("Error calling the micro service: " + e.getMessage());
+            log.error("Error calling the micro service: " + e.getMessage());
             Thread.currentThread().interrupt();
         }
         return httpResponse;
