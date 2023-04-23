@@ -11,7 +11,11 @@
     <modules>
         <module>TradingAlgorithm</module>
         <module>TradingHandler</module>
+        <module>TradingApplicationCore</module>
+        <module>SignalOneHandler</module>
+        <module>SignalTwoHandler</module>
         <module>TradingApplication</module>
+        <module>TradingApplicationCache</module>
     </modules>
 
     <properties>
