@@ -30,6 +30,8 @@
   Furthermore services need not to face any downtime when adding the new URL endpoint to database there need not be any downtime for the other services.
 * If the TPS for a specific Signal is increasing over time number of nodes/pods of that specific microservice can be increased as the solution is deployed as modules rather than a monolithic one.
 * When an unidentified Signal is passed ,we are routing to an endpoint to which invalidate the request and cancel the Trade.
+* Sonar Lint was enabled in the IDE to increase the Code quality by fixing the warnings.
+* Slf4j is integrated for production ready logging.
 
 
 ## Future Improvements
