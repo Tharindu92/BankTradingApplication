@@ -2,7 +2,6 @@ package com.bank.trade.application.service;
 
 import com.bank.trade.application.handler.SignalHandleServiceAbstract;
 import com.bank.trade.application.signal.Signal;
-import com.bank.trade.application.signal.SignalOne;
 import com.bank.trade.application.signal.SignalThree;
 import com.bank.trade.application.util.AppConstants;
 import org.springframework.stereotype.Service;
